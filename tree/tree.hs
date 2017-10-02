@@ -10,11 +10,6 @@ simpleTree :: Tree
 simpleTree = Node Leaf Leaf
 
 
-getNodesCount :: Tree -> Int
-getNodesCount Leaf = 1
-getNodesCount (Node x y) = (getNodesCount x) + (getNodesCount y) + 1
-
-
 getLeavesCount :: Tree -> Int
 getLeavesCount Leaf = 1
 getLeavesCount (Node x y) = (getLeavesCount x) + (getLeavesCount y)
