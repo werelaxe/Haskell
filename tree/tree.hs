@@ -17,9 +17,6 @@ getLeavesCount (Node x y) = (getLeavesCount x) + (getLeavesCount y)
 
 getPathSum :: Tree -> Int
 getPathSum Leaf = 0
-getPathSum (Node Leaf Leaf) = 2
-getPathSum (Node Leaf y) = 1 + (getLeavesCount y) + (getPathSum y)
-getPathSum (Node x Leaf) = (getLeavesCount x) + (getPathSum x) + 1
 getPathSum (Node x y) = (getLeavesCount x) + (getPathSum x) + (getLeavesCount y) + (getPathSum y)
 
 
